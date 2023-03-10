@@ -38,6 +38,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       'Index 2: School',
       style: optionStyle,
     ),
+    Text(
+      'Index 3: School',
+      style: optionStyle,
+    ),
   ];
 
   void _onItemTapped(int index) {
@@ -169,7 +173,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             ]),
       ]),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.notifications),
             label: 'Notifikasi',
