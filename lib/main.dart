@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
 import 'pages/home_page.dart';
 
 void main(List<String> args) {
-  runApp(myApp());  
+  runApp(const myApp());
 }
 
 class myApp extends StatelessWidget {
