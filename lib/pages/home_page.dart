@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gky_project/utils/mytheme.dart';
 
+import 'splash_screen.dart';
+
 void main() => runApp(const HomePage());
 
 class HomePage extends StatelessWidget {
@@ -113,7 +115,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ],
                 ),
                 child: InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return SplashScreen();
+                    }));
+                  },
                   splashColor: Colors.white10,
                   child: Column(
                     children: [
