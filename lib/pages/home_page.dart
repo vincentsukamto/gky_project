@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gky_project/utils/mytheme.dart';
 
 import 'splash_screen.dart';
+import 'list_ibadah.dart';
 
 void main() => runApp(const HomePage());
 
@@ -118,7 +119,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   onTap: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (BuildContext context) {
-                      return SplashScreen();
+                      return ListIbadah();
                     }));
                   },
                   splashColor: Colors.white10,
