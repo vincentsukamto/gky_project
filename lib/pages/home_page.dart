@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gky_project/utils/mytheme.dart';
 
 void main() => runApp(const HomePage());
 
@@ -8,6 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: MyStatefulWidget(),
     );
   }
@@ -54,6 +56,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: MyTheme.appBarColor,
         centerTitle: true,
         title: const Text('GKY Puri'),
       ),
