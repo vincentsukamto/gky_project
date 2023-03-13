@@ -45,9 +45,7 @@ class ListIbadah extends StatelessWidget {
         itemBuilder: (_, index) {
           return Container(
             padding: const EdgeInsets.only(bottom: 20),
-            child: SesiBlock(
-              
-            ),
+            child: SesiBlock(),
           );
         }),
     );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gky_project/utils/mytheme.dart';
 
+import 'package:gky_project/pages/seat_ibadah.dart';
+
 class SesiBlock extends StatelessWidget {
   const SesiBlock({super.key});
 
@@ -55,7 +57,10 @@ class SesiBlock extends StatelessWidget {
                 return GestureDetector(
                   onTap: () {
                     // seat selection
-                    
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context) {
+                      return SeatIbadah();
+                    }));
                   },
                   child: Container(
                     decoration: BoxDecoration(
