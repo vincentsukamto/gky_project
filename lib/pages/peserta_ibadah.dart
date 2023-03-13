@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gky_project/pages/home_page.dart';
 import 'package:gky_project/pages/presensi_ibadah.dart';
+import 'package:gky_project/utils/mytheme.dart';
 
 const List<int> list = <int>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -15,7 +16,7 @@ class PesertaIbadah extends StatelessWidget {
         appBar: AppBar( 
           centerTitle: true,
           title: Text("GKY Puri"),
-          backgroundColor: Colors.blue,
+          backgroundColor: MyTheme.appBarColor,
         ),
         // BODY 
         body: Column(

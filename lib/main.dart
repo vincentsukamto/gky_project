@@ -1,5 +1,7 @@
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gky_project/pages/splash_screen.dart';
+import 'package:gky_project/utils/mytheme.dart';
 
 import 'pages/home_page.dart';
 
@@ -14,7 +16,8 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: MyTheme.myLightTheme,
+      home: SplashScreen(),
     );
   }
 }
