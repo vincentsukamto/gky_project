@@ -36,6 +36,7 @@ class SeatIbadah extends StatelessWidget {
                           26, 
                           (row) {
                             alphabetCounter++;
+                            String rowNo = String.fromCharCode(65 + alphabetCounter);
                             return Wrap(
                               children: List.generate(
                                 10, 
@@ -50,6 +51,27 @@ class SeatIbadah extends StatelessWidget {
                                       ),
                                     );
                                   }
+                                  if(seatCounter == 9) {
+                                    seatCounter=0;
+                                  }
+                                  seatCounter++;
+                                  String seatNo = "$seatCounter";
+                                  // untuk buat seat unavailable
+                                  if(col == 2 && row == 3 || col == 3 && row == 3) {
+                                    return Padding(
+                                      padding: const EdgeInsets.all(5.0),
+                                      child: Container(
+                                        height: 25,
+                                        width: 25,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(2.0),
+                                          color: Color.fromARGB(255, 153, 153, 153),
+                                          border: Border.all(width: .5, color: const Color(0xff707070))
+                                        ),
+                                        child: Center(child: Text(String.fromCharCode(65 + alphabetCounter)+"$col")),
+                                      )
+                                    );
+                                  }
                                   // untuk buat gap
                                   if((col == 5 || col == 5) || (row == 15 || row == 15)) {
                                     return Padding(
@@ -60,19 +82,23 @@ class SeatIbadah extends StatelessWidget {
                                       ),
                                     );
                                   }
-                                  seatCounter++;
                                   return Padding(
                                     padding: const EdgeInsets.all(5.0),
-                                    child: Container(
-                                      height: 25,
-                                      width: 25,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(2.0),
-                                        color: const Color(0xffffffff),
-                                        border: Border.all(width: .5, color: const Color(0xff707070))
-                                      ),
-                                      child: Center(child: Text(String.fromCharCode(65 + alphabetCounter)+"$col")),
-                                    )
+                                    child: GestureDetector (
+                                      onTap: () {
+                                        print("$rowNo$seatNo");
+                                      },
+                                      child: Container(
+                                        height: 25,
+                                        width: 25,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(2.0),
+                                          color: const Color(0xffffffff),
+                                          border: Border.all(width: .5, color: const Color(0xff707070))
+                                        ),
+                                        child: Center(child: Text(String.fromCharCode(65 + alphabetCounter)+"$col")),
+                                      )
+                                    ),
                                   );
                                 }
                               ),
